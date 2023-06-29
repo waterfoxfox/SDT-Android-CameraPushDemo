@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">摄像头发送DEMO</string>
+    <string name="account_text">服务器IP:</string>
+    <string name="passwd_text">直播间ID:</string>
+    <string name="account_hint">(请输入服务器IP地址)</string>
+    <string name="passwd_hint">(请输入房间ID)</string>
+    <string name="login_btn_text">确定</string>
+    <string name="passwd_checkbox_text">记住设置</string>
+    <string name="user_setting_title">高级设置</string>
+    <string name="send_position">发送位置:</string>
+    <string name="recv_position">接收位置:</string>
+    <string name="position_hint">0~5</string>
+    <string name="using_your_mic_to_record_audio">请求使用麦克风</string>
+    <string name="stop_send_video_audio">是否停止推送?</string>
+</resources>
