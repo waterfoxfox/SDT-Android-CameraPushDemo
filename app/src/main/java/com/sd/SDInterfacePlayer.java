@@ -70,7 +70,7 @@ public class SDInterfacePlayer {
     }
 
 
-    public void startPlay(final int nIndex, final int renderWidth, final int renderHeight) {
+    public void startPlay(final int nIndex, final int renderWidth, final int renderHeight, final boolean renderKeepRatio) {
         mPlayIndex = nIndex;
         if (mInited) 
 		{
@@ -84,12 +84,12 @@ public class SDInterfacePlayer {
 				{
                     Log.i(TAG, "start play video only on index:" + nIndex + " with render w:" + renderWidth + " h:" + renderHeight);
                 }
-                nativeStartRtpPlay(nIndex, mRenderer.GetRenderPointer(), renderWidth, renderHeight);
+                nativeStartRtpPlay(nIndex, mRenderer.GetRenderPointer(), renderWidth, renderHeight, renderKeepRatio);
             }
             else 
 			{
                 Log.i(TAG, "start play audio only on index:" + nIndex);
-                nativeStartRtpPlay(nIndex, 0, 0, 0);
+                nativeStartRtpPlay(nIndex, 0, 0, 0, true);
             }
         }
         else 
@@ -117,7 +117,7 @@ public class SDInterfacePlayer {
     private static native void nativeInitCtx(Context ctx);
     //decoderMode = 0(软解码)  1(硬解码)  2(硬解码优先)
     private native long nativeCreate(boolean playAudioOnly, boolean playVideoOnly, boolean playAudioOnJava, final int decoderMode);
-    private native void nativeStartRtpPlay(final int nIndex, final long renderPointer, final int renderWidth, final int renderHeight);
+    private native void nativeStartRtpPlay(final int nIndex, final long renderPointer, final int renderWidth, final int renderHeight, final boolean renderKeepRatio);
     private native void nativeStopRtpPlay();
     private native void nativeDestroy();
 }
