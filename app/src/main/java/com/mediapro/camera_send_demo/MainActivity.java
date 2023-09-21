@@ -422,7 +422,7 @@ public class MainActivity extends AppCompatActivity {
 
             //混音时播放0号位置音频(服务器开启混音模式时，混音音频从0号位置下发)
             //非混音模式下，按业务设计播放对应位置音频
-            mPlayerAudio.startPlay(0, 0, 0);
+            mPlayerAudio.startPlay(0, 0, 0, true);
 
             //开始推送
             boolean bRet = SDInterfaceCameraPublisher.Inst().startPublish();

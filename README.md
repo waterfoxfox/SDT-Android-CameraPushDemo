@@ -17,7 +17,7 @@ DEMO可动态切换前后置摄像头、视频软编码硬编码可选。
 SDK API位于java\com\sd包中
 <br>
 
-测试工程使用Android Studio编译
+测试工程使用Android Studio编译, Android Gradle Plugin Version 3.6.4, Gradle Version 5.6.4    
 
 
 
